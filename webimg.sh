@@ -1,5 +1,6 @@
 #!/bin/bash
-####
+######################################################################################################
+#
 # converting all jpg and png images to a given size
 #
 # usage ./webimage.sh [widthxheight] [/path/to/images]
@@ -7,7 +8,7 @@
 #
 # creates a thumb folder within given path and puts the resized images in it
 #
-####
+######################################################################################################
 
 imgsize=$1
 path=$2
