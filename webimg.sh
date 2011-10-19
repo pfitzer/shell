@@ -10,8 +10,22 @@
 #
 ######################################################################################################
 
-imgsize=$1
-path=$2
+#
+# function show the usage
+#
+usage() {
+echo "./webimg.sh -s 800x600 -p /path/to/images"
+echo ""
+echo "-h	show this help"
+echo "-s imagesize widthxheight eg. 800x600"
+echo "-p /path/to/images"
+
+}
+
+#
+# function convert the images
+#
+do_convert() {
 
 cd $path
 rm -R  thumbs
@@ -43,3 +57,22 @@ done
 )
 clear
 echo "all images resized"
+}
+
+# if no parameters set
+# show usage
+if [ $# -eq 0 ] ; then
+    usage
+    exit 1
+fi 
+
+while getopts ':hs:p:' OPTION ; do
+  case "$OPTION" in
+    h)   usage; exit 1;;
+    p)	 path="$OPTARG";;
+    s)   imgsize="$OPTARG";;
+    *)   usage; exit 1
+  esac
+done
+
+do_convert
