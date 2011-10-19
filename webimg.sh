@@ -3,7 +3,7 @@
 #
 # converting all jpg and png images to a given size
 #
-# usage ./webimage.sh [widthxheight] [/path/to/images]
+# usage ./webimage.sh -s widthxheight -p /path/to/images
 # width and heigth in px
 #
 # creates a thumb folder within given path and puts the resized images in it
