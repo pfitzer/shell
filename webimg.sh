@@ -17,8 +17,8 @@ usage() {
 echo "./webimg.sh -s 800x600 -p /path/to/images"
 echo ""
 echo "-h	show this help"
-echo "-s imagesize widthxheight eg. 800x600"
-echo "-p /path/to/images"
+echo "-s    imagesize widthxheight eg. 800x600"
+echo "-p    /path/to/images"
 
 }
 
